@@ -73,14 +73,14 @@ export const radioPlayerInit = () => {
     chageIconPlay();
   });
 
-  radioVolume.addEventListener('input', () => {
+  //radioVolume.addEventListener('input', () => {
     
 
 
 
-    audio.volume = radioVolume.value / 100;
-  });
+  //  audio.volume = radioVolume.value / 100;
+  //});
 
-  radioVolume.value = audioItem.volume * 100;
+  //radioVolume.value = audioItem.volume * 100;
 
 };
