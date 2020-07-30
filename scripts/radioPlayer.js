@@ -15,7 +15,7 @@ export const radioPlayerInit = () => {
   radioStop.disabled = true;
 
   // Функция для смены иконки
-  const chageIconPlay = () => {
+  const changeIconPlay = () => {
     if(audio.paused) {
       radio.classList.remove('play')
       radioStop.classList.add('fa-play')
@@ -60,7 +60,7 @@ export const radioPlayerInit = () => {
     audio.src = target.dataset.radioStantion;
     
     audio.play();
-    chageIconPlay();
+    changeIconPlay();
   });
 
   // обработчик события для паузы или запуска радиовещания
@@ -70,7 +70,7 @@ export const radioPlayerInit = () => {
     } else {
       audio.pause();
     }
-    chageIconPlay();
+    changeIconPlay();
   });
 
   //radioVolume.addEventListener('input', () => {
@@ -82,5 +82,11 @@ export const radioPlayerInit = () => {
   //});
 
   //radioVolume.value = audioItem.volume * 100;
+
+    // Функция для остановки воспроизвдения при смене таба
+    radioPlayerInit.stop = () => {
+      audio.pause();
+      changeIconPlay();
+    }
 
 };

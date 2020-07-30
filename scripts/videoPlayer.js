@@ -144,8 +144,14 @@ export const videoPlayerInit = () => {
     }
     
   }
-
-
   videoVolume.value = videoPlayer.volume * 100;
-  
+
+    // Функция для остановки воспроизвдения при смене таба
+    videoPlayerInit.stop = () => {
+      if(!videoPlayer.paused) {
+        stopPlay();
+      }
+    }
+
+
 };

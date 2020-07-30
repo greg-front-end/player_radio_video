@@ -13,6 +13,11 @@ const deactivationPlayer = () => {
   temp.style.display = 'none';
   playerBtn.forEach(item => item.classList.remove('active'));
   playerBlock.forEach(item => item.classList.remove('active'));
+
+  // Вызов методов которые останавливают воспроизведение при смене таба
+  musicPlayerInit.stop();
+  videoPlayerInit.stop();
+  radioPlayerInit.stop();
 }
 // Обработчик событий => Метод благодаря которым активируются кнопки
 playerBtn.forEach((btn, i) => btn.addEventListener('click', () => {
