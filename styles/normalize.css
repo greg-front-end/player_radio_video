@@ -347,3 +347,20 @@ template {
 [hidden] {
 	display: none;
 }
+.video-fullscreen {
+  cursor: pointer;
+  padding-right: 10px;
+}
+.video-icon {
+  margin: 0 5px;
+}
+.video-volume {
+  max-width: 100px;
+}
+.radio-stop {
+  margin-right: 20px;
+}
+.radio-volume {
+  max-width: 200px;
+  background-color: #f4b214;
+}
